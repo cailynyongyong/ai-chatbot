@@ -1,1 +1,2 @@
-export const welcomeMessage = "Hi, how can I help you today?";
+export const welcomeMessage =
+  "Hi, please first upload the file you want to chat with me about.";

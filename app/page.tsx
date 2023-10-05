@@ -93,10 +93,13 @@ export default function Home() {
       <Popover>
         <PopoverContent align="start" className="w-[440px] mr-4">
           <Chat
-            endpoint="api/chat"
-            emoji="🏴‍☠️"
-            titleText="Patchy the Chatty Pirate"
-            placeholder="I'm an LLM pretending to be a pirate! Ask me about the pirate life!"
+            endpoint="api/chat/retrieval"
+            showIngestForm={true}
+            placeholder={
+              'I\'ve got a nose for finding the right documents! Ask, "What is a document loader?"'
+            }
+            emoji="🐶"
+            titleText="Dana the Document-Retrieving Dog"
             // emptyStateComponent={}
           ></Chat>
         </PopoverContent>
