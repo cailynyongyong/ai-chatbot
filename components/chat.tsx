@@ -15,12 +15,10 @@ import { useChat } from "ai/react";
 import { Grid } from "react-loader-spinner";
 import Bubble from "./chat/bubble";
 import { welcomeMessage } from "@/lib/strings";
-import { ChatWindow } from "@/components/ChatWindow";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import type { FormEvent } from "react";
 import type { AgentStep } from "langchain/schema";
-import { ChatMessageBubble } from "@/components/ChatMessageBubble";
 import { UploadDocumentsForm } from "@/components/UploadDocumentsForm";
 import { IntermediateStep } from "./IntermediateStep";
 
