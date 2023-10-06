@@ -213,19 +213,19 @@ export default function Chat(props: {
           <div>
             <form
               onSubmit={sendMessage}
-              className="flex items-center justify-center w-full space-x-2"
+              className="flex items-center space-x-2"
             >
-              <div className="flex">{intemediateStepsToggle}</div>
+              {/* <div className="flex">{intemediateStepsToggle}</div> */}
 
               <Input
-                className="p-4 mr-8 rounded grow"
                 value={input}
                 placeholder={placeholder}
                 onChange={handleInputChange}
+                style={{ width: "300px" }}
               />
               <Button
                 type="submit"
-                className="px-8 py-4 text-white bg-black rounded shrink-0 hover:bg-gray-700 w-28"
+                className="text-white bg-black hover:bg-gray-700"
               >
                 <div
                   role="status"

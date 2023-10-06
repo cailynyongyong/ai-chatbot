@@ -10,15 +10,7 @@ export function Navbar() {
         className={`mr-4 ${pathname === "/" ? "text-white border-b" : ""}`}
         href="/"
       >
-        🏴‍☠️ Chat
-      </a>
-      <a
-        className={`mr-4 ${
-          pathname === "/retrieval" ? "text-white border-b" : ""
-        }`}
-        href="/retrieval"
-      >
-        🐶 Retrieval
+        Home
       </a>
     </nav>
   );

@@ -50,7 +50,7 @@ const condenseQuestionPrompt = PromptTemplate.fromTemplate(
 );
 
 const ANSWER_TEMPLATE = `You are an energentic customer service agent, and must answer all questions like a happy, helpful agent would.
-Be kind!
+Be concise, no more than three sentences.
 
 Answer the question based only on the following context and chat history:
 <context>
