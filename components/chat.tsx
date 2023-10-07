@@ -12,7 +12,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useChat } from "ai/react";
-import { Grid } from "react-loader-spinner";
 import Bubble from "./chat/bubble";
 import { welcomeMessage } from "@/lib/strings";
 import { ToastContainer, toast } from "react-toastify";
@@ -31,9 +30,6 @@ export default function Chat(props: {
   showIngestForm?: boolean;
   showIntermediateStepsToggle?: boolean;
 }) {
-  // const { messages, input, handleInputChange, handleSubmit, isLoading } =
-  //   useChat();
-
   const messageContainerRef = useRef<HTMLDivElement | null>(null);
   const {
     endpoint,
@@ -46,16 +42,6 @@ export default function Chat(props: {
 
   // Create a reference to the scroll area
   const scrollAreaRef = useRef<null | HTMLDivElement>(null);
-
-  // useEffect(() => {
-  //   // Scroll to the bottom when the messages change
-  //   if (scrollAreaRef.current) {
-  //     scrollAreaRef.current.scrollTo({
-  //       top: scrollAreaRef.current.scrollHeight,
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // }, [messages]);
 
   const [showIntermediateSteps, setShowIntermediateSteps] = useState(false);
   const [intermediateStepsLoading, setIntermediateStepsLoading] =

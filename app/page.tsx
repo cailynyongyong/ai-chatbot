@@ -15,12 +15,9 @@ export default function Home() {
           <Chat
             endpoint="api/chat/retrieval"
             showIngestForm={true}
-            placeholder={
-              'I\'ve got a nose for finding the right documents! Ask, "What is a document loader?"'
-            }
+            placeholder={"질문을 해주세요!"}
             emoji="🐶"
             titleText="Dana the Document-Retrieving Dog"
-            // emptyStateComponent={}
           ></Chat>
         </PopoverContent>
         <PopoverTrigger asChild className="fixed bottom-4 right-4">

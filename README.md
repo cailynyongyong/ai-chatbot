@@ -1,4 +1,4 @@
-# 🦜️🔗 LangChain + Next.js Starter Template
+# 🦜️🔗 LangChain + Next.js Retrieval Chatbot
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/langchain-ai/langchain-nextjs-template)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flangchain-ai%2Flangchain-nextjs-template)
@@ -7,10 +7,7 @@ This template scaffolds a LangChain.js + Next.js starter app. It showcases how t
 use cases. Specifically:
 
 - [Simple chat](/app/api/chat/route.ts)
-- [Returning structured output from an LLM call](/app/api/chat/structured_output/route.ts)
-- [Answering complex, multi-step questions with agents](/app/api/chat/agents/route.ts)
 - [Retrieval augmented generation (RAG) with a chain and a vector store](/app/api/chat/retrieval/route.ts)
-- [Retrieval augmented generation (RAG) with an agent and a vector store](/app/api/chat/retrieval_agents/route.ts)
 
 Most of them use Vercel's [AI SDK](https://github.com/vercel-labs/ai) to stream tokens to the client and display the incoming messages.
 
@@ -25,12 +22,12 @@ First, clone this repo and download it locally.
 Next, you'll need to set up environment variables in your repo's `.env.local` file. Copy the `.env.example` file to `.env.local`.
 To start with the basic examples, you'll just need to add your OpenAI API key.
 
-Next, install the required packages using your preferred package manager (e.g. `yarn`).
+Next, install the required packages using your preferred package manager (e.g. `npm`).
 
 Now you're ready to run the development server:
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result! Ask the bot something and you'll see a streamed response:
@@ -40,30 +37,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 Backend logic lives in `app/api/chat/route.ts`. From here, you can change the prompt and model, or add other modules and logic.
-
-## 🧱 Structured Output
-
-The second example shows how to have a model return output according to a specific schema using OpenAI Functions.
-Click the `Structured Output` link in the navbar to try it out:
-
-![A streaming conversation between the user and an AI agent](/public/images/structured-output-conversation.png)
-
-The chain in this example uses a [popular library called Zod](https://zod.dev) to construct a schema, then formats it in the way OpenAI expects.
-It then passes that schema as a function into OpenAI and passes a `function_call` parameter to force OpenAI to return arguments in the specified format.
-
-For more details, [check out this documentation page](https://js.langchain.com/docs/modules/chains/popular/structured_output).
-
-## 🦜 Agents
-
-To try out the agent example, you'll need to give the agent access to the internet by populating the `SERPAPI_API_KEY` in `.env.local`.
-Head over to [the SERP API website](https://serpapi.com/) and get an API key if you don't already have one.
-
-You can then click the `Agent` example and try asking it more complex questions:
-
-![A streaming conversation between the user and an AI agent](/public/images/agent-conversation.png)
-
-This example uses the OpenAI Functions agent, but there are a few other options you can try as well.
-See [this documentation page for more details](https://js.langchain.com/docs/modules/agents/agent_types/).
 
 ## 🐶 Retrieval
 
@@ -112,5 +85,4 @@ Check out the [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Thank You!
 
-Thanks for reading! If you have any questions or comments, reach out to us on Twitter
-[@LangChainAI](https://twitter.com/langchainai), or [click here to join our Discord server](https://discord.gg/langchain).
+Thanks for reading!
