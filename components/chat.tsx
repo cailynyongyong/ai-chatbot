@@ -23,7 +23,6 @@ import { IntermediateStep } from "./IntermediateStep";
 
 export default function Chat(props: {
   endpoint: string;
-  // emptyStateComponent: ReactElement,
   placeholder?: string;
   titleText?: string;
   emoji?: string;

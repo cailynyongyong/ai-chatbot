@@ -16,8 +16,8 @@ export default function Home() {
             endpoint="api/chat/retrieval"
             showIngestForm={true}
             placeholder={"질문을 해주세요!"}
-            emoji="🐶"
-            titleText="Dana the Document-Retrieving Dog"
+            emoji="🤖"
+            titleText="Document Retrieval Agent"
           ></Chat>
         </PopoverContent>
         <PopoverTrigger asChild className="fixed bottom-4 right-4">
